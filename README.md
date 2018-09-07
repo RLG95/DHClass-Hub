@@ -14,3 +14,4 @@ Welcome to the DH Class Hub! This is a repository to help introduce and orient P
 
 * There are things we'll do together **only in the webpage view of GitHub:** See if you can find the "Issues" and "Wiki" areas by mousing over the icons on the top (in the new view) or the right-hand (old view) side of the GitHub page: "Issues" is the exclamation point inside the circle, and the "Wiki" pages will be under the icon for a book. We're using the "Issues" page to open conversations about questions, problems, things we need to discuss and fix and work on together. If we formulate a new method or policy we definitely want to follow, we'll post a Wiki page about it. The Issues and Wikis are searchable, and you write in them using [markdown syntax](https://guides.github.com/features/mastering-markdown/), which lets you easily and quickly format headings, lists, bold, italics, or share an image, etc. 
 # alex_repo1
+# my_page
