@@ -16,6 +16,6 @@ file = attribute file {xsd:anyURI} # ebb: LOOK UP HOW TO CODE A URI HERE. I want
 caption = element caption {mixed{person*}}
 headLine = element headLine {text}
 body = element body{(p | subHead)+}
-p = element p {mixed{(person | event)*}}
+p = element p {mixed{ (person | event)*  } }
 event = element event {when, text}
 subHead = element subHead {text}
