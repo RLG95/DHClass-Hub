@@ -1,0 +1,16 @@
+
+    body {
+    background-color: blue;
+    }
+    head {
+        font-size: 20px;
+        font-family: helvetica
+    }
+    p {
+        font-size: 12px;
+        font-family: helvetica
+    }
+    h1 {
+        font-size: 12px;
+        font-family: cursive
+    }
