@@ -6,21 +6,26 @@
 	*Answer:* attributes in the `<div>` elements.
 	
 	* What XPath would find ONLY the books in the file?
-		`//div[@type="book"]`	(n=3)
+		Best: `//div[@type="book"]`	(n=3)
+		Okay: `//body/div/div`
 	
 	* What XPath would find ONLY the chapters in the file?
-		`//div[@type="chapter"]`	(n=26)
+		Best: `//div[@type="chapter"]`	(n=26)
+		Okay: `//body/div/div/div` or `//div/div/div`
 	
 	* What XPath would find ONLY the chapters in Book 2?
-		//div[@type="book"][2]/div[@type="chapter"]	(n=8)
+		Best: `//div[@type="book"][2]/div[@type="chapter"]`	(n=8)
+		Okay: `//body/div/div[2]/div` or `//div/div[2]/div`
 
 **Q2.** Look at the outline structure of the document to help you with these: 
 	
 	* What’s the XPath to identify the <head> element inside a chapter <div>?
-		`//div[@type="chapter"]/head`	(n=26)
+		Best: `//div[@type="chapter"]/head`	(n=26)
+		Okay: `//div/div/div/head`
 	
 	* How would we locate a `<l>` (or line) element inside a chapter <div>?
-		//div[@type="chapter"]//l	(n=142)
+		Best: `//div[@type="chapter"]//l`	(n=142)
+		Okay: `//div/div/div//l'
 
 **Q3.** Georg Forster used a lot of footnotes in his document: These are coded inside `<ref>` elements throughout the body paragraphs of the text. 
 	
