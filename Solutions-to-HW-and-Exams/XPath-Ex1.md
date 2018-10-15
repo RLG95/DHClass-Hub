@@ -41,7 +41,8 @@
 		`count(//head//placeName)`	(n=56)
 		
 * What’s the XPath to find the placeNames that are only mentioned in the notes?  
-		`//ref//placeName`	(n=151)
+		`//ref//placeName`	(n=151)  
+		or `//note//placeName` or `//ref//note//placeName`
 
 * What’s the XPath to find the placeNames that are only mentioned in the notes of Book I?  
 		`//div[@type="book"][1]//ref//placeName`	(n=38)  
