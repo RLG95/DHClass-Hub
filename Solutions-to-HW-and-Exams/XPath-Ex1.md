@@ -4,29 +4,29 @@
 **Q1.** Like most of the long voyage publications, Georg Forster’s voyage account is produced in multiple books, and inside each books we find multiple chapters. Both books and chapters are coded with `<div>` elements. Take a look at the outline view of the document before you begin to familiarize yourself with the structure of this file, and answer the following:
 
  * How can XPath tell apart the books from the chapters?
-	   Answer: attributes in the `<div>` elements.
+	   _Answer:_ attributes in the `<div>` elements.
 	
 * What XPath would find ONLY the books in the file?
-		Best: `//div[@type="book"]`	(n=3)
-		Okay: `//body/div/div`
+		_Best:_ `//div[@type="book"]`	(n=3)
+		_Okay:_ `//body/div/div`
 	
 * What XPath would find ONLY the chapters in the file?
-		Best: `//div[@type="chapter"]`	(n=26)
-		Okay: `//body/div/div/div` or `//div/div/div`
+		_Best:_ `//div[@type="chapter"]`	(n=26)
+		_Okay:_ `//body/div/div/div` or `//div/div/div`
 	
 * What XPath would find ONLY the chapters in Book 2?
-		Best: `//div[@type="book"][2]/div[@type="chapter"]`	(n=8)
-		Okay: `//body/div/div[2]/div` or `//div/div[2]/div`
+		_Best:_ `//div[@type="book"][2]/div[@type="chapter"]`	(n=8)
+		_Okay:_ `//body/div/div[2]/div` or `//div/div[2]/div`
 
 **Q2.** Look at the outline structure of the document to help you with these: 
 	
 * What’s the XPath to identify the <head> element inside a chapter <div>?
-		Best: `//div[@type="chapter"]/head`	(n=26)
-		Okay: `//div/div/div/head`
+		_Best:_ `//div[@type="chapter"]/head`	(n=26)
+		_Okay:_ `//div/div/div/head`
 	
 * How would we locate a `<l>` (or line) element inside a chapter <div>?
-		Best: `//div[@type="chapter"]//l`	(n=142)
-		Okay: `//div/div/div//l'
+		_Best:_ `//div[@type="chapter"]//l`	(n=142)
+		_Okay:_ `//div/div/div//l'
 
 **Q3.** Georg Forster used a lot of footnotes in his document: These are coded inside `<ref>` elements throughout the body paragraphs of the text. 
 	
@@ -52,5 +52,5 @@
 
 * How many of these are there? (Our answer uses an XPath function, count() 
 	  to show you how this is written, but you might simply havee read the 
-	  number of results in the search result  window.
+	  number of results in the search result window.
 	    `count(//div[@type="book"][1]//ref//placeName)`	(n=38)
