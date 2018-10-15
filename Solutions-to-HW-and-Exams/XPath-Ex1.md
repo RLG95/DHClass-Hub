@@ -2,8 +2,9 @@
 
 
 **Q1.** Like most of the long voyage publications, Georg Forster’s voyage account is produced in multiple books, and inside each books we find multiple chapters. Both books and chapters are coded with `<div>` elements. Take a look at the outline view of the document before you begin to familiarize yourself with the structure of this file, and answer the following:
+	
 	* How can XPath tell apart the books from the chapters?
-	*Answer:* attributes in the `<div>` elements.
+	   Answer: attributes in the `<div>` elements.
 	
 	* What XPath would find ONLY the books in the file?
 		Best: `//div[@type="book"]`	(n=3)
