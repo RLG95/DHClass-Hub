@@ -20,13 +20,13 @@
 
 **Q2.** Look at the outline structure of the document to help you with these: 
 	
-* What’s the XPath to identify the <head> element inside a chapter <div>?
-		_Best:_ `//div[@type="chapter"]/head`	(n=26)
+* What’s the XPath to identify the `<head>` element inside a chapter `<div>`? 
+        _Best:_ `//div[@type="chapter"]/head`	(n=26)
 		_Okay:_ `//div/div/div/head`
 	
-* How would we locate a `<l>` (or line) element inside a chapter <div>?
+* How would we locate a `<l>` (or line) element inside a chapter `<div>`?
 		_Best:_ `//div[@type="chapter"]//l`	(n=142)
-		_Okay:_ `//div/div/div//l'
+		_Okay:_ `//div/div/div//l`
 
 **Q3.** Georg Forster used a lot of footnotes in his document: These are coded inside `<ref>` elements throughout the body paragraphs of the text. 
 	
