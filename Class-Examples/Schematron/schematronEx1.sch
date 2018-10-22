@@ -7,7 +7,7 @@
     <pattern id="personElement">
         <!--The @id attribute doesn't "do" anything; it just informs you-->
         <rule context="tei:person">
-            <assert test="contains(@xml:id,current()/descendant::tei:surname[1])">The xml:id attribute on person elements needs to start with the surname of the person.</assert>
+            <assert test="contains(@xml:id,current()/descendant::tei:surname[1])" role="information">The xml:id attribute on person elements needs to start with the surname of the person.</assert>
             
         </rule>
         
