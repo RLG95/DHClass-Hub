@@ -9,16 +9,27 @@ xmlns:xs="http://www.w3.org/2001/XMLSchema"
 <xsl:template match="/">
     <html>
        <head><title>George Washington <xsl:apply-templates select="descendant::titleStmt/title"/></title>
+           <link rel="stylesheet" type="text/css" href="washLetter.css"/>
        </head> 
         <body>
             
-    <xsl:apply-templates/>        
+    <h1><xsl:apply-templates select="descendant::titleStmt/title"/> </h1>  
+            <xsl:apply-templates select="descendant::body"/>
             
         </body>
  
     </html>
     
 </xsl:template>
+    
+    <xsl:template match="p">
+        <p> <xsl:apply-templates/></p>
+    </xsl:template>
+    
+    <xsl:template match="placeName">
+        <span class="place"><xsl:apply-templates/></span>
+        
+    </xsl:template>
     
 
 </xsl:stylesheet>
