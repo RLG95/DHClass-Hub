@@ -64,11 +64,11 @@
         </html>
     </xsl:template>
 
-    <xsl:template match="descendant::fs[child::f[@select = 'Yes']]">
+    <xsl:template match="fs[child::f[@select = 'Yes']]">
         <!-- RJP: This match processes the data we selected with the first table's apply-template selection in our source node match. -->
         <tr>
             <td>
-                <xsl:value-of select="count(./preceding-sibling::fs[f[@select = 'Yes']]) + 1"/>
+                <xsl:value-of select="count(preceding-sibling::fs[f[@select = 'Yes']]) + 1"/>
             </td>
             <td>
                 <xsl:apply-templates select="f[@name = 'question']"/>
@@ -86,8 +86,8 @@
                 <xsl:apply-templates select="f[@select = 'Blank']/@n"/>
             </td>
             <td>
-                <xsl:text/>
-                <xsl:value-of select="sum(f/@n)"/>
+                <xsl:text>TOTAL: </xsl:text>
+                <xsl:value-of select="f/@n => sum()"/>
             </td>
             <!--ebb: Here is a story about the need for simplicity, about Why it's best to use the sum() function here, though other
                solutons are available:
